@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Cordova/CDV.h>
 
 @interface SpeechToTextPlugin : CDVPlugin
 
