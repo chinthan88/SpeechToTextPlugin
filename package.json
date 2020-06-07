@@ -1,0 +1,17 @@
+{
+  "name": "SpeechToTextPlugin",
+  "version": "0.0.1",
+  "description": "Speech to Text cordova plugin",
+  "cordova": {
+    "id": "chinthan-plugin-speechtotextplugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Chinthan",
+  "license": "MIT"
+}

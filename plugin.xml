@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="chinthan-plugin-speechtotextplugin" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+    <name>SpeechToTextPlugin</name>
+    <description>Speech to Text cordova plugin</description>
+    <license>MIT</license>
+    <js-module name="SpeechToTextPlugin" src="www/SpeechToTextPlugin.js">
+        <clobbers target="cordova.plugins.SpeechToTextPlugin" />
+    </js-module>
+    <!-- ios -->
+    <platform name="ios">
+      <config-file target="config.xml" parent="/*">
+        <feature name="SpeechRecognition">
+          <param name="ios-package" value="SpeechRecognition" />
+        </feature>
+      </config-file>
+
+      <config-file target="*-Info.plist" parent="NSMicrophoneUsageDescription">
+        <string>Request to use Microphone</string>
+      </config-file>
+
+      <config-file target="*-Info.plist" parent="NSSpeechRecognitionUsageDescription">
+        <string>Request to use Speech Recognition</string>
+      </config-file>
+
+      <header-file src="src/ios/SpeechToTextPlugin.h"/>
+      <source-file src="src/ios/SpeechToTextPlugin.m"/>
+
+      <framework src="Speech.framework" />
+    </platform>
+</plugin>
